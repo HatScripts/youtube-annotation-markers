@@ -6,6 +6,8 @@
 // @author      HatScripts
 // @include     http*://www.youtube.com/watch*
 // @require     http://code.jquery.com/jquery-2.1.4.min.js
+// @downloadURL https://github.com/HatScripts/YouTubeAnnotationMarkers/raw/master/youtube-annotation-markers.user.js
+// @updateURL   https://github.com/HatScripts/YouTubeAnnotationMarkers/raw/master/youtube-annotation-markers.user.js
 // @noframes
 // ==/UserScript==
 
