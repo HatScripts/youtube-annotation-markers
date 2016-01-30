@@ -6,7 +6,19 @@ Userscript that marks where annotations are on the progress bar of the HTML5 You
 Should be compatible with [YouTube+](https://github.com/ParticleCore/Particle) and [YouTube Center](https://github.com/YePpHa/YouTubeCenter).
 
 ### Download
+This is a userscript. To use it you'll first need one of the following browser extensions/add-ons:
+
+Browser | Extension/Add-on
+--------|----------------
+![Icon](https://raw.githubusercontent.com/alrra/browser-logos/master/chrome-android/chrome-android_16x16.png) Chrome  | [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+![Icon](https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_16x16.png) Firefox | [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/)
+![Icon](https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_16x16.png) Opera   | [Violentmonkey](https://addons.opera.com/en/extensions/details/violent-monkey/)
+![Icon](https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_16x16.png) Safari | [Tampermonkey](https://safari.tampermonkey.net/tampermonkey.safariextz)
+
+If you already have one of the above, install this script from one of the following links:
 * [GitHub](https://github.com/HatScripts/YouTubeAnnotationMarkers/raw/master/youtube-annotation-markers.user.js)
+* [GreasyFork](https://greasyfork.org/scripts/16667-youtube-annotation-markers/code/YouTube%20Annotation%20Markers.user.js)
+* [OpenUserJS](https://openuserjs.org/install/HatScripts/YouTube_Annotation_Markers.user.js)
 
 ### Contribute
 Please report any issues or request features on the [issues tracker](https://github.com/HatScripts/YouTubeAnnotationMarkers/issues).
