@@ -29,7 +29,7 @@ Please report any issues or request features on the [issues tracker](https://git
 
 ### The MIT License (MIT)
 
-Copyright © 2015 HatScripts
+Copyright © 2016 HatScripts
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
