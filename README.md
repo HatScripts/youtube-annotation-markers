@@ -31,3 +31,4 @@ Please report any issues or request features on the [issues tracker](https://git
     * Blacklist external link annotations
     * Blacklist all link annotations
     * Whitelist only certain channels' annotations
+* [ ] Annotation transcripts
