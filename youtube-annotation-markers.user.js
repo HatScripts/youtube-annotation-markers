@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        YouTube Annotation Markers
 // @namespace   https://github.com/HatScripts/YouTubeAnnotationMarkers
-// @version     1.2.0
+// @version     1.2.1
 // @description Marks where annotations are on the progress bar of the HTML5 YouTube player.
 // @author      HatScripts
 // @include     http*://*.youtube.com/*
@@ -31,7 +31,7 @@
     }
 
     function annotationToMarker(annotation) {
-        var rectRegions = Array.from(annotation.querySelectorAll("rectRegion:not([t=never])"));
+        var rectRegions = Array.from(annotation.querySelectorAll("movingRegion *:not([t=never])"));
         if (rectRegions.length === 0) {
             return false;
         }
