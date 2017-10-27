@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        YouTube Annotation Markers
 // @namespace   https://github.com/HatScripts/YouTubeAnnotationMarkers
-// @version     1.1.0
+// @version     1.1.1
 // @description Marks where annotations are on the progress bar of the HTML5 YouTube player
 // @author      HatScripts
 // @include     http*://www.youtube.com/watch*
@@ -70,7 +70,13 @@ $(function () {
         });
     };
 
-    var videoId = $("#page-manager").find("ytd-watch").attr("video-id");
+    $.getVideoId = function () {
+        var url = new URL(location.href);
+        return url.searchParams.get("v") || url.pathname.split("/").pop()
+            || $("#page-manager").find("ytd-watch").attr("video-id");
+    };
+
+    var videoId = $.getVideoId();
     var moviePlayer = $("#movie_player");
     var progressBar = moviePlayer.find(".ytp-progress-bar:first");
     var progressList = progressBar.find(".ytp-progress-list:first");
