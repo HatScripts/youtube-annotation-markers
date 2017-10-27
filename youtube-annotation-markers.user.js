@@ -1,12 +1,11 @@
 // ==UserScript==
 // @name        YouTube Annotation Markers
 // @namespace   https://github.com/HatScripts/YouTubeAnnotationMarkers
-// @version     1.1.4
+// @version     1.1.5
 // @description Marks where annotations are on the progress bar of the HTML5 YouTube player.
 // @author      HatScripts
 // @include     http*://*.youtube.com/*
 // @require     http://code.jquery.com/jquery-2.1.4.min.js
-// @noframes
 // ==/UserScript==
 
 var parseTime = function (timeStr) {
