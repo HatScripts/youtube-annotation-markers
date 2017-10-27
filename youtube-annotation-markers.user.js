@@ -1,81 +1,80 @@
 // ==UserScript==
 // @name        YouTube Annotation Markers
 // @namespace   https://github.com/HatScripts/YouTubeAnnotationMarkers
-// @version     1.1.5
+// @version     1.2.0
 // @description Marks where annotations are on the progress bar of the HTML5 YouTube player.
 // @author      HatScripts
 // @include     http*://*.youtube.com/*
-// @require     http://code.jquery.com/jquery-2.1.4.min.js
 // ==/UserScript==
 
-var parseTime = function (timeStr) {
-    var parts = timeStr.split(":");
-    var duration = 0;
-    for (var multiplier = 1; parts.length > 0; multiplier *= 60) {
-        duration += multiplier * parseFloat(parts.pop());
+(function () {
+    function parseTime(timeStr) {
+        var parts = timeStr.split(":");
+        var duration = 0;
+        for (var multiplier = 1; parts.length > 0; multiplier *= 60) {
+            duration += multiplier * parseFloat(parts.pop());
+        }
+        return duration;
     }
-    return duration;
-};
 
-$(function () {
-    $.getVideoAnnotationXml = function (videoId) {
-        return $.ajax({
-            data:     {"video_id": videoId},
-            url:      "annotations_invideo",
-            dataType: "xml"
-        });
-    };
+    function getVideoAnnotationXml(videoId, success) {
+        var request = new XMLHttpRequest();
+        request.open("GET", "annotations_invideo?video_id=" + videoId, true);
+        request.onload = function () {
+            if (request.status >= 200 && request.status < 400) {
+                var xmlString = request.responseText;
+                var domParser = new DOMParser();
+                success(domParser.parseFromString(xmlString, "text/xml"));
+            }
+        };
+        request.send();
+    }
 
-    $.annotationToMarker = function (annotationData) {
-        var annotation = $(annotationData);
-        var rectRegions = annotation.find("rectRegion");
+    function annotationToMarker(annotation) {
+        var rectRegions = Array.from(annotation.querySelectorAll("rectRegion:not([t=never])"));
         if (rectRegions.length === 0) {
             return false;
         }
-        var first = rectRegions.first();
-        var start = first.attr("t");
-        var end = rectRegions.last().attr("t");
-        if (start === "never" || end === "never") {
-            return false;
-        }
+        var start = rectRegions[0].getAttribute("t");
+        var end = rectRegions[rectRegions.length - 1].getAttribute("t");
         var startTime = parseTime(start);
         var duration = parseTime(end) - startTime;
-        var appearance = annotation.find("appearance");
-        var c = parseInt(appearance.attr("bgColor"), 10);
+        var appearance = annotation.querySelector("appearance");
+        var c = parseInt(appearance.getAttribute("bgColor"), 10);
         var rgb = [(c & 0xff0000) >> 16, (c & 0x00ff00) >> 8, (c & 0x0000ff)];
-        console.log(start + " -> " + end + ": " + c);
-        return $("<div></div>")
-            .addClass("ytp-play-progress")
-            .css({
-                "position":   "absolute",
-                "left":       ((startTime / videoDuration) * 100) + "%",
-                "bottom":     "100%",
-                "transform":  "scaleX(" + (duration / videoDuration) + ")",
-                "background": "rgb(" + rgb + ")",
-                "opacity":    0.5
-            });
-    };
+        var marker = document.createElement("div");
+        marker.classList.add("ytp-play-progress");
+        marker.style.position = "absolute";
+        marker.style.left = ((startTime / videoDuration) * 100) + "%";
+        marker.style.bottom = "100%";
+        marker.style.transform = "scaleX(" + (duration / videoDuration) + ")";
+        marker.style.background = "rgb(" + rgb + ")";
+        marker.style.opacity = 0.5;
+        return marker;
+    }
 
-    $.parseVideoAnnotationXml = function (xml) {
-        var annotations = $(xml).find("annotation");
-        annotations.each(function (i, annotation) {
-            var marker = $.annotationToMarker(annotation);
-            if (marker) {
-                progressList.append(marker);
-            }
+    function parseVideoAnnotationXml(xml) {
+        Array.from(xml.querySelectorAll("annotation")).map(function (annotation) {
+            return annotationToMarker(annotation);
+        }).filter(function (annotation) {
+            return annotation;
+        }).sort(function (a1, a2) {
+            return parseInt(a1.style.left) - parseInt(a2.style.left);
+        }).forEach(function (annotation) {
+            progressList.appendChild(annotation);
         });
-    };
+    }
 
-    $.getVideoId = function () {
+    function getVideoId() {
         var url = new URL(location.href);
         return url.searchParams.get("v") || url.pathname.split("/").pop()
-            || $("#page-manager").find("ytd-watch").attr("video-id");
-    };
+            || document.querySelector("#page-manage ytd-watch").getAttribute("video-id");
+    }
 
-    var videoId = $.getVideoId();
-    var moviePlayer = $("#movie_player");
-    var progressBar = moviePlayer.find(".ytp-progress-bar:first");
-    var progressList = progressBar.find(".ytp-progress-list:first");
-    var videoDuration = parseInt(progressBar.attr("aria-valuemax"), 10);
-    $.getVideoAnnotationXml(videoId).success($.parseVideoAnnotationXml);
-});
+    var videoId = getVideoId();
+    var player = document.querySelector("#player");
+    var progressBar = player.querySelector(".ytp-progress-bar");
+    var progressList = progressBar.querySelector(".ytp-progress-list");
+    var videoDuration = parseTime(player.querySelector(".ytp-time-duration").innerText);
+    getVideoAnnotationXml(videoId, parseVideoAnnotationXml);
+})();
