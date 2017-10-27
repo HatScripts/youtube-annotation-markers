@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        YouTube Annotation Markers
 // @namespace   https://github.com/HatScripts/YouTubeAnnotationMarkers
-// @version     1.2.1
+// @version     1.2.2
 // @description Marks where annotations are on the progress bar of the HTML5 YouTube player.
 // @author      HatScripts
 // @include     http*://*.youtube.com/*
@@ -50,6 +50,7 @@
         marker.style.transform = "scaleX(" + (duration / videoDuration) + ")";
         marker.style.background = "rgb(" + rgb + ")";
         marker.style.opacity = 0.5;
+        marker.style.zIndex = Math.round(startTime * 10);
         return marker;
     }
 
@@ -59,7 +60,7 @@
         }).filter(function (annotation) {
             return annotation;
         }).sort(function (a1, a2) {
-            return parseInt(a1.style.left) - parseInt(a2.style.left);
+            return parseInt(a1.style.zIndex) - parseInt(a2.style.zIndex);
         }).forEach(function (annotation) {
             progressList.appendChild(annotation);
         });
