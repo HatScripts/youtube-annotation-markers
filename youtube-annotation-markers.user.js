@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        YouTube Annotation Markers
 // @namespace   https://github.com/HatScripts/YouTubeAnnotationMarkers
-// @version     1.1.1
+// @version     1.1.2
 // @description Marks where annotations are on the progress bar of the HTML5 YouTube player
 // @author      HatScripts
 // @include     http*://www.youtube.com/watch*
@@ -46,7 +46,6 @@ $(function () {
         var appearance = annotation.find("appearance");
         var c = parseInt(appearance.attr("bgColor"), 10);
         var rgb = [(c & 0xff0000) >> 16, (c & 0x00ff00) >> 8, (c & 0x0000ff)];
-        var text = annotation.find("text");
         console.log(start + " -> " + end + ": " + c);
         return $("<div></div>")
             .addClass("ytp-play-progress")
