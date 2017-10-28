@@ -3,7 +3,9 @@ Userscript that marks where annotations are on the progress bar of the HTML5 You
 
 ![Preview image](https://cdn.rawgit.com/HatScripts/YouTubeAnnotationMarkers/master/preview.png)
 
-Should be compatible with [YouTube+](https://github.com/ParticleCore/Particle) and [YouTube Center](https://github.com/YePpHa/YouTubeCenter).
+<sub><sup>
+Should be compatible with other YouTube userscripts such as [YouTube Center](https://github.com/YePpHa/YouTubeCenter) and [YouTube+](https://github.com/ParticleCore/Particle).
+</sup></sub>
 
 ### Download
 This is a userscript. To use it you'll first need one of the following browser extensions/add-ons:
