@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name        YouTube Annotation Markers
 // @namespace   https://github.com/HatScripts/YouTubeAnnotationMarkers
-// @version     1.2.2
+// @version     1.2.3
 // @description Marks where annotations are on the progress bar of the HTML5 YouTube player.
 // @author      HatScripts
-// @include     http*://*.youtube.com/*
+// @match       http://*.youtube.com/*
+// @match       https://*.youtube.com/*
 // ==/UserScript==
 
 (function () {
