@@ -9,13 +9,13 @@
 // ==/UserScript==
 
 (function () {
-    function parseTime(timeStr) {
-        let parts = timeStr.split(":");
-        let duration = 0;
-        for (let multiplier = 1; parts.length > 0; multiplier *= 60) {
-            duration += multiplier * parseFloat(parts.pop());
-        }
-        return duration;
+    function parseTime(s) {
+        const multipliers = [1, 60, 3600, 86400];
+        return s
+            .split(":")
+            .reverse()
+            .map(p => parseFloat(p) || 0)
+            .reduce((prev, curr, i) => prev + curr * multipliers[i]);
     }
 
     function getVideoAnnotationXml(videoId, success) {
