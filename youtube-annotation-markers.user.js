@@ -41,9 +41,9 @@
         const end = rectRegions[rectRegions.length - 1].getAttribute("t");
         const startTime = parseTime(start);
         const duration = parseTime(end) - startTime;
-        const appearance = annotation.querySelector("appearance");
-        const c = parseInt(appearance.getAttribute("bgColor"), 10);
-        const rgb = [(c & 0xff0000) >> 16, (c & 0x00ff00) >> 8, (c & 0x0000ff)];
+        const appearance = annotation.querySelector("appearance[bgColor]");
+        const c = appearance ? parseInt(appearance.getAttribute("bgColor"), 10) : 16777215;
+        const rgb = [(c & 0xff0000) >> 16, (c & 0x00ff00) >> 8, c & 0x0000ff];
         const marker = document.createElement("div");
         marker.classList.add("ytp-play-progress");
         marker.style.position = "absolute";
