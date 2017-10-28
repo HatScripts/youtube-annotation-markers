@@ -12,11 +12,11 @@ This is a userscript. To use it you'll first need one of the following browser e
 
 |   | Tampermonkey | Greasemonkey | Violentmonkey |
 |---|--------------|--------------|---------------|
-![Chrome](https://cdn.rawgit.com/alrra/browser-logos/master/src/chrome/chrome_24x24.png "Chrome") | [Link](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) ([Beta](https://chrome.google.com/webstore/detail/tampermonkey-beta/gcalenpjmijncebpfijmoaglllgpjagf)) | - | [Link](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)
-![Firefox](https://cdn.rawgit.com/alrra/browser-logos/master/src/firefox/firefox_24x24.png "Firefox") | [Link](https://addons.mozilla.org/firefox/addon/tampermonkey/) | [Link](https://addons.mozilla.org/firefox/addon/greasemonkey/) | - |
-![Edge](https://cdn.rawgit.com/alrra/browser-logos/master/src/edge/edge_24x24.png "Edge") | [Link](https://www.microsoft.com/store/apps/9NBLGGH5162S) | - | - |
-![Safari](https://cdn.rawgit.com/alrra/browser-logos/master/src/safari/safari_24x24.png "Safari") | [Link](https://safari.tampermonkey.net/tampermonkey.safariextz) | - | - |
-![Opera](https://cdn.rawgit.com/alrra/browser-logos/master/src/opera/opera_24x24.png "Opera") | [Link](https://addons.opera.com/extensions/details/tampermonkey-beta/) | - | [Link](https://addons.opera.com/extensions/details/violent-monkey/)
+![Chrome](https://hatscripts.com/a.svg?i=chrome&w=24 "Chrome") | [Link](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) ([Beta](https://chrome.google.com/webstore/detail/tampermonkey-beta/gcalenpjmijncebpfijmoaglllgpjagf)) | - | [Link](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)
+![Firefox](https://hatscripts.com/a.svg?i=firefox&w=24 "Firefox") | [Link](https://addons.mozilla.org/firefox/addon/tampermonkey/) | [Link](https://addons.mozilla.org/firefox/addon/greasemonkey/) | - |
+![Edge](https://hatscripts.com/a.svg?i=microsoft-edge&w=24 "Edge") | [Link](https://www.microsoft.com/store/apps/9NBLGGH5162S) | - | - |
+![Safari](https://hatscripts.com/a.svg?i=safari&w=24 "Safari") | [Link](https://safari.tampermonkey.net/tampermonkey.safariextz) | - | - |
+![Opera](https://hatscripts.com/a.svg?i=opera&w=24 "Opera") | [Link](https://addons.opera.com/extensions/details/tampermonkey-beta/) | - | [Link](https://addons.opera.com/extensions/details/violent-monkey/)
 
 ### Contribute
 Please report any issues or request features on the [issues tracker](https://github.com/HatScripts/YouTubeAnnotationMarkers/issues).
