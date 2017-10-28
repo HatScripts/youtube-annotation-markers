@@ -22,11 +22,14 @@ This is a userscript. To use it you'll first need one of the following browser e
 Please report any issues or request features on the [issues tracker](https://github.com/HatScripts/YouTubeAnnotationMarkers/issues).
 
 ### TODO
-* [ ] Optionally hide markers when annotations are disabled
-* [ ] Annotation filtering, e.g:
-    * Blacklist subscribe link annotations, e.g. https://youtube.com/subscription_center?add_user=YouTube
-    * Blacklist internal link annotations, e.g. youtube.com
-    * Blacklist external link annotations
-    * Blacklist all link annotations
-    * Whitelist only certain channels' annotations
-* [ ] Annotation transcripts
+- [ ] Optionally hide markers when annotations are disabled
+- [ ] Annotation blacklist/whitelist:
+    - Blacklist
+      - By keywords, e.g. "subscribe", "like" or "rate"
+      - By whether they are link annotations
+        - Subscribe links, e.g. https://youtube.com/subscription_center?add_user=YouTube
+        - Internal links (youtube.com)
+        - External links (All other domains)
+    - Whitelist
+      - By channel
+- [ ] Annotation transcripts
