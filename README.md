@@ -19,7 +19,7 @@ This is a userscript. To use it you'll first need one of the following browser e
 ![Opera]   | [Link][op-t] | -            | [Link][op-v]  |
 
 ### Contribute
-Please report any issues or request features on the [issues tracker][issues].
+Please report issues or request features on the [issues tracker][issues].
 
 ### TODO
 - [ ] Optionally hide markers when annotations are disabled
