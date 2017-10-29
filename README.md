@@ -1,25 +1,25 @@
 # YouTube Annotation Markers
 Userscript that marks where annotations are on the progress bar of the HTML5 YouTube player.
 
-![Preview image](https://cdn.rawgit.com/HatScripts/YouTubeAnnotationMarkers/master/preview.png)
+![Preview image][preview]
 
 <sub><sup>
-Should be compatible with other YouTube userscripts such as [YouTube Center](https://github.com/YePpHa/YouTubeCenter) and [YouTube+](https://github.com/ParticleCore/Particle).
+Should be compatible with other YouTube userscripts such as [YouTube Center][ytc] and [YouTube+][yt+].
 </sup></sub>
 
 ### Download
 This is a userscript. To use it you'll first need one of the following browser extensions/add-ons:
 
-|   | Tampermonkey | Greasemonkey | Violentmonkey |
-|---|--------------|--------------|---------------|
-![Chrome](https://hatscripts.com/a.svg?i=chrome&w=24 "Chrome") | [Link](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) ([Beta](https://chrome.google.com/webstore/detail/tampermonkey-beta/gcalenpjmijncebpfijmoaglllgpjagf)) | - | [Link](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)
-![Firefox](https://hatscripts.com/a.svg?i=firefox&w=24 "Firefox") | [Link](https://addons.mozilla.org/firefox/addon/tampermonkey/) | [Link](https://addons.mozilla.org/firefox/addon/greasemonkey/) | - |
-![Edge](https://hatscripts.com/a.svg?i=microsoft-edge&w=24 "Edge") | [Link](https://www.microsoft.com/store/apps/9NBLGGH5162S) | - | - |
-![Safari](https://hatscripts.com/a.svg?i=safari&w=24 "Safari") | [Link](https://safari.tampermonkey.net/tampermonkey.safariextz) | - | - |
-![Opera](https://hatscripts.com/a.svg?i=opera&w=24 "Opera") | [Link](https://addons.opera.com/extensions/details/tampermonkey-beta/) | - | [Link](https://addons.opera.com/extensions/details/violent-monkey/)
+|          | Tampermonkey | Greasemonkey | Violentmonkey |
+|----------|--------------|--------------|---------------|
+![Chrome]  | [Link][ch-t] | -            | [Link][ch-v]  |
+![Firefox] | [Link][ff-t] | [Link][ff-g] | -             |
+![Edge]    | [Link][ed-t] | -            | -             |
+![Safari]  | [Link][sa-t] | -            | -             |
+![Opera]   | [Link][op-t] | -            | [Link][op-v]  |
 
 ### Contribute
-Please report any issues or request features on the [issues tracker](https://github.com/HatScripts/YouTubeAnnotationMarkers/issues).
+Please report any issues or request features on the [issues tracker][issues].
 
 ### TODO
 - [ ] Optionally hide markers when annotations are disabled
@@ -33,3 +33,21 @@ Please report any issues or request features on the [issues tracker](https://git
     - Whitelist
       - By channel
 - [ ] Annotation transcripts
+
+[preview]: https://cdn.rawgit.com/HatScripts/YouTubeAnnotationMarkers/master/preview.png
+[ytc]:     https://github.com/YePpHa/YouTubeCenter
+[yt+]:     https://github.com/ParticleCore/Particle
+[issues]:  https://github.com/HatScripts/YouTubeAnnotationMarkers/issues
+[chrome]:  https://hatscripts.com/a.svg?i=chrome&w=24         "Chrome"
+[firefox]: https://hatscripts.com/a.svg?i=firefox&w=24        "Firefox"
+[edge]:    https://hatscripts.com/a.svg?i=microsoft-edge&w=24 "Edge"
+[safari]:  https://hatscripts.com/a.svg?i=safari&w=24         "Safari"
+[opera]:   https://hatscripts.com/a.svg?i=opera&w=24          "Opera"
+[ch-t]:    https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
+[ch-v]:    https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag
+[ff-t]:    https://addons.mozilla.org/firefox/addon/tampermonkey/
+[ff-g]:    https://addons.mozilla.org/firefox/addon/greasemonkey/
+[ed-t]:    https://www.microsoft.com/store/apps/9NBLGGH5162S
+[sa-t]:    https://safari.tampermonkey.net/tampermonkey.safariextz
+[op-t]:    https://addons.opera.com/extensions/details/tampermonkey-beta/
+[op-v]:    https://addons.opera.com/extensions/details/violent-monkey/
