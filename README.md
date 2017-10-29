@@ -8,15 +8,18 @@ Should be compatible with other YouTube userscripts such as [YouTube Center][ytc
 </sup></sub>
 
 ### Download
-This is a userscript. To use it you'll first need one of the following browser extensions/add-ons:
+1. This is a userscript. To use it you'll first need a userscript manager for your browser:
 
-|          | Tampermonkey | Greasemonkey | Violentmonkey |
-|----------|--------------|--------------|---------------|
-![Chrome]  | [Link][ch-t] | -            | [Link][ch-v]  |
-![Firefox] | [Link][ff-t] | [Link][ff-g] | -             |
-![Edge]    | [Link][ed-t] | -            | -             |
-![Safari]  | [Link][sa-t] | -            | -             |
-![Opera]   | [Link][op-t] | -            | [Link][op-v]  |
+   |          | Tampermonkey | Greasemonkey | Violentmonkey |
+   |----------|--------------|--------------|---------------|
+   ![Chrome]  | [Link][ch-t] | -            | [Link][ch-v]  |
+   ![Firefox] | [Link][ff-t] | [Link][ff-g] | -             |
+   ![Edge]    | [Link][ed-t] | -            | -             |
+   ![Safari]  | [Link][sa-t] | -            | -             |
+   ![Opera]   | [Link][op-t] | -            | [Link][op-v]  |
+
+2. Then install this script from one of the following links:
+   - [GitHub][gh-dl]
 
 ### Contribute
 Please report issues or request features on the [issues tracker][issues].
@@ -37,6 +40,7 @@ Please report issues or request features on the [issues tracker][issues].
 [preview]: https://cdn.rawgit.com/HatScripts/YouTubeAnnotationMarkers/master/preview.png
 [ytc]:     https://github.com/YePpHa/YouTubeCenter
 [yt+]:     https://github.com/ParticleCore/Particle
+[gh-dl]:   https://github.com/HatScripts/YouTubeAnnotationMarkers/raw/master/youtube-annotation-markers.user.js
 [issues]:  https://github.com/HatScripts/YouTubeAnnotationMarkers/issues
 [chrome]:  https://hatscripts.com/a.svg?i=chrome&w=24         "Chrome"
 [firefox]: https://hatscripts.com/a.svg?i=firefox&w=24        "Firefox"
