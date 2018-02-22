@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        YouTube Annotation Markers
 // @namespace   https://github.com/HatScripts/YouTubeAnnotationMarkers
-// @version     1.2.4
+// @version     1.2.5
 // @description Marks where annotations are on the progress bar of the HTML5 YouTube player.
 // @author      HatScripts
 // @match       http://*.youtube.com/*
@@ -71,7 +71,7 @@
     }
 
     const videoId = getVideoId();
-    const player = document.querySelector("#player");
+    const player = document.querySelector("#player:not(.skeleton)");
     const progressBar = player.querySelector(".ytp-progress-bar");
     const progressList = progressBar.querySelector(".ytp-progress-list");
     const videoDuration = parseTime(player.querySelector(".ytp-time-duration").innerText);
